@@ -3,6 +3,38 @@ using namespace std;
 
 int main() {
 
+string s;
+cin >> s;
+
+while(1)
+{
+    int index = s.find("EGYPT");
+    //by replace function
+    // if(index == -1)
+    // {
+    //     break;
+    // }
+    // s.replace(index, 5, " ");
+
+    if(index != -1)
+    {
+        s.erase(index, 5);
+        s.insert(index, " ");
+    }else{
+        break;
+    }
+
+}
+
+cout << s << endl;
+return 0;
+
+
+
+
+
+
+
 
   // string s;
     // cin >> s;
@@ -27,21 +59,21 @@ int main() {
 
     //যদি না পায়, তাহলে string::npos রিটার্ন করে
 
-    string s, result = "";
-    cin >> s;
+//     string s, result = "";
+//     cin >> s;
 
-    for (size_t i = 0; i < s.length(); ) {
-        if (s.substr(i, 5) == "EGYPT") {
-            result += ' ';
-            i += 5;  // Skip "EGYPT"
-        } else {
-            result += s[i];
-            i++;
-        }
-    }
+//     for (size_t i = 0; i < s.length(); ) {
+//         if (s.substr(i, 5) == "EGYPT") {
+//             result += ' ';
+//             i += 5;  // Skip "EGYPT"
+//         } else {
+//             result += s[i];
+//             i++;
+//         }
+//     }
 
-    cout << result << endl;
-    return 0;
+//     cout << result << endl;
+//     return 0;
 }
 
 
