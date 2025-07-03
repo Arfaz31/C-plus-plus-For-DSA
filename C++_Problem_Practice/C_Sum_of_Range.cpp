@@ -16,7 +16,7 @@ ll get_even_sum(ll L, ll R) {
 }
 
 ll get_odd_sum(ll L, ll R) {
-    if (L % 2 == 0) L++; // make L odd
+    if (L % 2 == 0) L++; // make L odd L হবে range এর ভিতরে সবচেয়ে ছোট even সংখ্যা ধরো L = 3 so L++ = 3 + 1 = 4 can be possible not L-- = 2
     if (R % 2 == 0) R--; // make R odd
     if (L > R) return 0;
     ll n = (R - L) / 2 + 1;
@@ -68,3 +68,9 @@ int main() {
 //     sum(A-1) = sum(1 to 3) = 3*(3+1)/2 = 6 
 
 // sum(4 to 6) = 21 - 6 = 15
+
+// 
+
+//return n * (L + R) / 2; এটা arithmetic progression (AP) এর ফর্মুলা:
+
+// 👉 sum = (number of terms) × (first term + last term) ÷ 2
